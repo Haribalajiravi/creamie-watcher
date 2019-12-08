@@ -1,0 +1,19 @@
+{
+    "name": "creamie-watcher",
+    "version": "0.0.0",
+    "description": "Creamie HTML, CSS development file changes webpack watcher",
+    "main": "watch.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "creamie-watcher",
+        "webpack"
+    ],
+    "author": "Haribalaji R (haribalajiravi@gmail.com)",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "node-watch": "^0.6.3"
+    }
+}
