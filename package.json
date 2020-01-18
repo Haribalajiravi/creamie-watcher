@@ -1,6 +1,6 @@
 {
     "name": "creamie-watcher",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "Creamie HTML, CSS development file changes webpack watcher",
     "main": "watch.js",
     "scripts": {
@@ -12,6 +12,9 @@
     ],
     "author": "Haribalaji R (haribalajiravi@gmail.com)",
     "license": "MIT",
+    "bin": {
+        "creamie-watch": "index.js"
+    },
     "dependencies": {},
     "devDependencies": {
         "node-watch": "^0.6.3"
