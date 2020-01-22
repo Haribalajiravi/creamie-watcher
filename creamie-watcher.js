@@ -1,6 +1,6 @@
 const watch = require('node-watch');
 const CreamieBooter = require('./creamie-booter.js');
-const avoidEventFlag = 0;
+let avoidEventFlag = 0;
 
 const avoidMultipleEvents = function() {
     avoidEventFlag = avoidEventFlag ^ 1;
