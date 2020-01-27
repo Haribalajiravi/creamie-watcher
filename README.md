@@ -1,5 +1,7 @@
 ## Creamie Watcher [![Build Status](https://travis-ci.org/Haribalajiravi/creamie-watcher.svg?branch=master)](https://travis-ci.org/Haribalajiravi/creamie-watcher)
 
+> Note: This package is only dependant for ``
+
 ### Usage :
 To listen html & css file changes in application folder and creation of boot.js file which contains html & css file contents assigned to a key (key is decided to be a html/css filename for ease).
 
@@ -17,10 +19,11 @@ To load boot.js alone use,
 ### Method usage
 
     const  CreamieWatcher = require('creamie-watcher');
+    // watch for html/css files changes and load those in boot.js
     CreamieWatcher.watch();
-    // Load b
+    // Load boot.js
     CreamieWatcher.boot();
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMDgzNTM2OCwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbLTQxNDg4MjU4NCwtMzMyNDU1MzYzXX0=
 -->
