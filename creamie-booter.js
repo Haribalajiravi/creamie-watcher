@@ -1,9 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-VarConfig = {
+var VarConfig = {
     ignore: ['index.html', 'style.css'],
     var: 'boot.js',
+    realPath: `src`,
     getAllFiles: function(currentDirPath, extension, callback) {
         fs.readdirSync(currentDirPath).forEach(function(name) {
             let filePath = path.join(currentDirPath, name);
@@ -17,14 +18,14 @@ VarConfig = {
     },
     getHtmlFiles: function() {
         let files = [];
-        VarConfig.getAllFiles('src', '.html', function(data) {
+        VarConfig.getAllFiles(VarConfig.realPath, '.html', function(data) {
             files.push(data);
         });
         return files;
     },
     getCssFiles: function() {
         let files = [];
-        VarConfig.getAllFiles('src', '.css', function(data) {
+        VarConfig.getAllFiles(VarConfig.realPath, '.css', function(data) {
             files.push(data);
         });
         return files;
@@ -60,8 +61,9 @@ VarConfig = {
         });
         return `export default ${JSON.stringify(x)}`;
     },
-    generate: function() {
-        fs.writeFile(`src/${VarConfig.var}`, VarConfig.construct(), function(err) {
+    generate: function(path) {
+        VarConfig.realPath = (path) ? `${path}` : `src`;
+        fs.writeFile(`${VarConfig.realPath}/${VarConfig.var}`, VarConfig.construct(), function(err) {
             if (err)
                 throw err;
             console.info("\x1b[32m", "Boot: htmls and csses successfully generated to boot.js✔️");
