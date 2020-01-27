@@ -16,8 +16,11 @@ To load boot.js alone use,
 
 ### Method usage
 
-    enter code here
+    const  CreamieWatcher = require('creamie-watcher');
+    CreamieWatcher.watch();
+    // Load b
+    CreamieWatcher.boot();
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMTk2ODIxMCwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbMTExMDgzNTM2OCwtMzMyNDU1MzYzXX0=
 -->
