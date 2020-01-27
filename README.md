@@ -3,8 +3,10 @@
 ### Usage :
 To listen html & css file changes in application folder and creation of boot.js file which contains html & css file contents assigned to a key (key is decided to be a html/css filename for ease).
 
-While development run
+While development run, changes being done by developer will be captured and loaded in boot.js. Then, our webpack will make use of boot.js to run our application.
+
+### Commands 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDcxODkyNSwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbMTU3OTE1ODA2NSwtMzMyNDU1MzYzXX0=
 -->
