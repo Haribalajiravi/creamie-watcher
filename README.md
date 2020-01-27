@@ -6,7 +6,8 @@ To listen html & css file changes in application folder and creation of boot.js 
 While development run, changes being done by developer will be captured and loaded in boot.js. Then, our webpack will make use of boot.js to run our application.
 
 ### Commands 
+To 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3OTE1ODA2NSwtMzMyNDU1MzYzXX0=
+eyJoaXN0b3J5IjpbLTExNDAwMjk3MTYsLTMzMjQ1NTM2M119
 -->
