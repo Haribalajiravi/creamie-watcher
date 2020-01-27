@@ -8,8 +8,16 @@ While development run, changes being done by developer will be captured and load
 ### Commands 
 To listen for html & css files change along with booter functionality.
 
-	creamie
+	creamie-watch
+
+To load boot.js alone use,
+
+	creamie-watch -i
+
+### Method usage
+
+    enter code here
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE1NjQ0NzA2LC0zMzI0NTUzNjNdfQ==
+eyJoaXN0b3J5IjpbMTIzMTk2ODIxMCwtMzMyNDU1MzYzXX0=
 -->
