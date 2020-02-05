@@ -8,9 +8,10 @@ describe('Component generation', () => {
         if (!fs.existsSync(`./test/test_junks`)) {
             fs.mkdirSync(`./test/test_junks`);
             fs.mkdirSync(`./test/test_junks/src`);
+            fs.mkdirSync(`./test/test_junks/src/hello`);
             try {
-                fs.writeFileSync('./test/test_junks/src/hello.html', '<h1>Hello World!</h1>');
-                fs.writeFileSync('./test/test_junks/src/hello.css', '.h1 { color: #ff0000; }');
+                fs.writeFileSync('./test/test_junks/src/hello-component.html', '<h1>Hello World!</h1>');
+                fs.writeFileSync('./test/test_junks/src/hello-component.css', '.h1 { color: #ff0000; }');
             } catch (err) {
                 throw err;
             }
@@ -26,7 +27,7 @@ describe('Component generation', () => {
     });
 
     it('boot.js existence', () => {
-        if (!fs.existsSync(`./test/test_junks/src/boot.js`)) {
+        if (!fs.existsSync(`./test/test_junks/src/hello/hello-boot.js`)) {
             throw 'Boot file is missing!'
         }
     });
