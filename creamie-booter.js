@@ -69,6 +69,10 @@ var VarConfig = {
     },
     generate: function (path) {
         VarConfig.realPath = (path) ? `${path}` : `src`;
+        VarConfig.var = {
+            html: [],
+            css: []
+        }
         let fileContents = VarConfig.construct();
         VarConfig.var.html.forEach((bootFolder) => {
             let mergedJson = {};
@@ -79,11 +83,11 @@ var VarConfig = {
             try {
                 fs.writeFileSync(`${VarConfig.realPath}/${bootFolder}/${bootFolder}-boot.js`, `export default ${JSON.stringify(mergedJson)}`, { mode: 0o755 });
                 console.info("\x1b[32m", `html and css successfully generated to ${bootFolder}/${bootFolder}-boot.js✔️`);
-              } catch(err) {
+            } catch (err) {
                 console.error(err);
-              }
+            }
         });
-        console.log('\x1b[0m','Boot is perfect!');
+        console.log('\x1b[0m', 'Boot is perfect!');
     }
 }
 

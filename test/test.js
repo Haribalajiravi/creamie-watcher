@@ -10,15 +10,15 @@ describe('Component generation', () => {
             fs.mkdirSync(`./test/test_junks/src`);
             fs.mkdirSync(`./test/test_junks/src/hello`);
             try {
-                fs.writeFileSync('./test/test_junks/src/hello-component.html', '<h1>Hello World!</h1>');
-                fs.writeFileSync('./test/test_junks/src/hello-component.css', '.h1 { color: #ff0000; }');
+                fs.writeFileSync('./test/test_junks/src/hello/hello-component.html', '<h1>Hello World!</h1>');
+                fs.writeFileSync('./test/test_junks/src/hello/hello-component.css', '.h1 { color: #ff0000; }');
             } catch (err) {
                 throw err;
             }
         }
     });
 
-    it('boot.js file creation', () => {
+    it('boot file creation', () => {
         try {
             CreamieBooter.generate('./test/test_junks/src');
         } catch (err) {
@@ -26,7 +26,7 @@ describe('Component generation', () => {
         }
     });
 
-    it('boot.js existence', () => {
+    it('boot file existence', () => {
         if (!fs.existsSync(`./test/test_junks/src/hello/hello-boot.js`)) {
             throw 'Boot file is missing!'
         }
