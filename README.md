@@ -1,4 +1,4 @@
-## Creamie Watcher [![Build Status](https://travis-ci.org/Haribalajiravi/creamie-watcher.svg?branch=master)](https://travis-ci.org/Haribalajiravi/creamie-watcher)
+## Creamie Watcher [![Build Status](https://travis-ci.org/Haribalajiravi/creamie-watcher.svg?branch=master)](https://travis-ci.org/Haribalajiravi/creamie-watcher) [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Haribalajiravi/creamie)
 
 > Note: This package is only dependant for [creamie-cli](https://www.npmjs.com/package/creamie-cli). Recommend not to use this for any other purpose.
 
