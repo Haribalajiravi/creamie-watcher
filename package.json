@@ -1,6 +1,6 @@
 {
-    "name": "creamie-watcher",
-    "version": "1.0.0",
+    "name": "@creamie/watcher",
+    "version": "0.0.0",
     "description": "Creamie HTML, CSS development file changes webpack watcher",
     "main": "creamie-watcher.js",
     "scripts": {
@@ -21,5 +21,8 @@
         "mocha": "^7.0.1",
         "node-watch": "^0.6.3",
         "rimraf": "^3.0.0"
+    },
+    "publishConfig": {
+        "access": "public"
     }
 }

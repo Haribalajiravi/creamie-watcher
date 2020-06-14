@@ -1,5 +1,5 @@
-## 1.0.0 (March 23, 2020)
+## 0.0.0 (June 14, 2020)
 
-### First release
+### First release (Beta)
 
 * Listener to check html & css files and wrap its content in boot.js

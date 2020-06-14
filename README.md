@@ -30,6 +30,3 @@ To load boot.js alone use,
     // Load boot.js
     CreamieWatcher.boot();
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5NDkxNjQ3MCwtMzMyNDU1MzYzXX0=
--->
