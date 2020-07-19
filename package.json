@@ -6,6 +6,11 @@
     "scripts": {
         "test": "mocha"
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm test"
+        }
+    },
     "keywords": [
         "creamie-watcher",
         "webpack"
@@ -18,6 +23,7 @@
     "dependencies": {},
     "devDependencies": {
         "chai": "^4.2.0",
+        "husky": "^4.2.5",
         "mocha": "^7.0.1",
         "node-watch": "^0.6.3",
         "rimraf": "^3.0.0"
