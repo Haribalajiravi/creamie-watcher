@@ -38,6 +38,15 @@ describe('Component generation', () => {
     }
   });
 
+  it('assets-boot.js | styles-boot.js should not exists', () => {
+    if(fs.existsSync(`./test/test_junks/src/assets/assets-boot.js`)) {
+      throw 'assets-boot.js is generating!';
+    }
+    if(fs.existsSync(`./test/test_junks/src/styles/styles-boot.js`)) {
+      throw 'styles-boot.js is generating!';
+    }
+  });
+
   after(() => {
     /* Flushing all junk data before testcase */
     rimraf(`./test/test_junks`, function () {
