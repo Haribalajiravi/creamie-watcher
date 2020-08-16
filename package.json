@@ -1,6 +1,6 @@
 {
     "name": "@creamie/watcher",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Creamie HTML, CSS development file changes webpack watcher",
     "main": "creamie-watcher.js",
     "scripts": {
@@ -29,7 +29,7 @@
         "eslint-config-prettier": "^6.11.0",
         "eslint-plugin-prettier": "^3.1.4",
         "husky": "^4.2.5",
-        "mocha": "^8.0.1",
+        "mocha": "^8.1.1",
         "node-watch": "^0.6.3",
         "prettier": "^2.0.5",
         "rimraf": "^3.0.0"
