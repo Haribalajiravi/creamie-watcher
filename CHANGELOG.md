@@ -1,3 +1,9 @@
+## 0.0.1 (Feb 02, 2021)
+
+### node-watch - package update
+
+* Update version to 0.7.1
+
 ## 0.0.0 (June 14, 2020)
 
 ### First release (Beta)
