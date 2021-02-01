@@ -1,4 +1,4 @@
-## 0.0.1 (Feb 02, 2021)
+## 0.0.3 (Feb 02, 2021)
 
 ### node-watch - package update
 
