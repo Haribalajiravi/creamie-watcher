@@ -1,6 +1,6 @@
 {
     "name": "@creamie/watcher",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Creamie HTML, CSS development file changes webpack watcher",
     "main": "creamie-watcher.js",
     "scripts": {
