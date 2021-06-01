@@ -98,18 +98,23 @@ var VarConfig = {
       let cssFile = `${bootFolder}-component.css`;
       mergedJson[htmlFile] = fileContents[htmlFile];
       mergedJson[cssFile] = fileContents[cssFile];
-      try {
-        fs.writeFileSync(
-          `${VarConfig.realPath}/${bootFolder}/${bootFolder}-boot.js`,
-          `export default ${JSON.stringify(mergedJson)}`,
-          { mode: 0o755 }
-        );
-        console.info(
-          '\x1b[32m',
-          `html and css successfully generated to ${bootFolder}/${bootFolder}-boot.js✔️`
-        );
-      } catch (err) {
-        console.error(err);
+      /**
+       * Avoiding non-component folders to generate boot
+       */
+      if (fileContents[htmlFile] || fileContents[cssFile]) {
+        try {
+          fs.writeFileSync(
+            `${VarConfig.realPath}/${bootFolder}/${bootFolder}-boot.js`,
+            `export default ${JSON.stringify(mergedJson)}`,
+            { mode: 0o755 }
+          );
+          console.info(
+            '\x1b[32m',
+            `html and css successfully generated to ${bootFolder}/${bootFolder}-boot.js✔️`
+          );
+        } catch (err) {
+          console.error(err);
+        }
       }
     });
     console.log('\x1b[0m', 'Boot is perfect!');

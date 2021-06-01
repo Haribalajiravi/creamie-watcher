@@ -1,3 +1,5 @@
+/* eslint-disable no-useless-catch */
+/* eslint-disable no-undef */
 const rimraf = require('rimraf');
 const fs = require('fs');
 const CreamieBooter = require('./../creamie-booter.js');
@@ -9,6 +11,7 @@ describe('Component generation', () => {
       fs.mkdirSync(`./test/test_junks`);
       fs.mkdirSync(`./test/test_junks/src`);
       fs.mkdirSync(`./test/test_junks/src/hello`);
+      fs.mkdirSync(`./test/test_junks/src/noncomponent`);
       try {
         fs.writeFileSync(
           './test/test_junks/src/hello/hello-component.html',
@@ -39,11 +42,25 @@ describe('Component generation', () => {
   });
 
   it('assets-boot.js | styles-boot.js should not exists', () => {
-    if(fs.existsSync(`./test/test_junks/src/assets/assets-boot.js`)) {
+    if (
+      fs.existsSync(`./test/test_junks/src/assets/assets-boot.js`)
+    ) {
       throw 'assets-boot.js is generating!';
     }
-    if(fs.existsSync(`./test/test_junks/src/styles/styles-boot.js`)) {
+    if (
+      fs.existsSync(`./test/test_junks/src/styles/styles-boot.js`)
+    ) {
       throw 'styles-boot.js is generating!';
+    }
+  });
+
+  it('non-component folder should not generate boot file', () => {
+    if (
+      fs.existsSync(
+        `./test/test_junks/src/noncomponent/noncomponent-boot.js`
+      )
+    ) {
+      throw 'assets-boot.js is generating!';
     }
   });
 
